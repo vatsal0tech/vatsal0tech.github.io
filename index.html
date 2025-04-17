@@ -2,35 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Coming Soon - Vatsal Patel</title>
-
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
-
-  <!-- Font Awesome for Social Icons -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vatsal Patel | Coming Soon</title>
+  
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-
-  <!-- tsParticles -->
   <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
 
   <style>
-    * {
+    html, body {
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-    }
-
-    html, body {
       height: 100%;
-      font-family: 'Orbitron', sans-serif;
-      background: #0c0f13;
+      font-family: 'Inter', sans-serif;
+      background: #0a0a0a;
+      color: white;
       overflow: hidden;
-      color: #fff;
     }
 
     #tsparticles {
-      position: absolute;
+      position: fixed;
       width: 100%;
       height: 100%;
       z-index: 0;
@@ -38,114 +30,101 @@
 
     .container {
       position: relative;
-      z-index: 1;
+      z-index: 2;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       text-align: center;
-      background: rgba(255, 255, 255, 0.05);
-      padding: 3rem 2rem;
-      border-radius: 20px;
-      margin: 8vh auto;
-      max-width: 600px;
-      box-shadow: 0 0 20px rgba(0, 255, 255, 0.2),
-                  inset 0 0 10px rgba(0, 255, 255, 0.1);
-      backdrop-filter: blur(10px);
-      transform: perspective(800px) rotateX(10deg) rotateY(5deg);
-      transition: transform 0.5s ease-in-out;
-    }
-
-    .container:hover {
-      transform: perspective(800px) rotateX(0deg) rotateY(0deg) scale(1.02);
+      padding: 1rem;
     }
 
     .tech-name {
-      font-size: 2.5rem;
-      font-weight: bold;
-      margin-bottom: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.6rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .tech-letter {
+      width: 70px;
+      height: 70px;
+      border-radius: 12px;
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(6px);
       display: flex;
       justify-content: center;
-      flex-wrap: wrap;
+      align-items: center;
+      transition: 0.3s ease;
+      box-shadow: 0 0 12px rgba(0,255,255,0.1);
     }
 
-    .tech-name span {
-      margin: 0 4px;
-      transition: transform 0.3s ease;
+    .tech-letter img {
+      max-width: 50px;
+      max-height: 50px;
     }
 
-    .tech-name span:hover {
-      transform: scale(1.2) rotate(5deg);
+    .tech-letter:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 18px rgba(0,255,255,0.3);
     }
 
-    .P { color: #306998; }      /* Python */
-    .Y { color: #ffde57; }      /* Python yellow */
-    .T { color: #68a063; }      /* Node.js */
-    .E { color: #ff9900; }      /* AWS */
-    .L { color: #4285f4; }      /* GCP Blue */
-    .A { color: #ea4335; }      /* GCP Red */
-    .V { color: #673ab7; }      /* Hostinger Purple */
-    .S { color: #34a853; }      /* GCP Green */
-    .N { color: #ff5722; }      /* Node reddish orange */
-
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      color: cyan;
-      text-shadow: 0 0 10px rgba(0,255,255,0.4);
-    }
-
-    p {
-      font-size: 1.1rem;
-      margin-bottom: 2rem;
+    h2 {
+      font-weight: 500;
+      margin-bottom: 1.2rem;
       color: #ccc;
     }
 
-    .email-form input[type="email"] {
-      padding: 0.8rem 1rem;
+    .email-form input {
+      padding: 0.6rem 1rem;
+      border-radius: 25px;
       border: none;
-      border-radius: 30px;
       margin-right: 0.5rem;
-      width: 60%;
-      max-width: 250px;
+      width: 250px;
+      font-size: 1rem;
     }
 
     .email-form button {
-      padding: 0.8rem 1.5rem;
+      padding: 0.6rem 1.2rem;
+      border-radius: 25px;
       border: none;
-      border-radius: 30px;
-      background: cyan;
+      background: #00ffff;
       color: #000;
-      font-weight: bold;
+      font-weight: 600;
       cursor: pointer;
-      box-shadow: 0 4px 10px rgba(0,255,255,0.5);
-      transition: all 0.3s ease;
+      transition: 0.3s ease;
     }
 
     .email-form button:hover {
-      background: #00e6e6;
-      transform: scale(1.05);
+      background: #00caca;
     }
 
     .social-icons {
-      margin-top: 2rem;
+      margin-top: 1.5rem;
     }
 
     .social-icons a {
       margin: 0 10px;
-      color: cyan;
       font-size: 1.5rem;
-      transition: color 0.3s, transform 0.3s;
+      color: #aaa;
+      transition: 0.3s;
     }
 
     .social-icons a:hover {
-      color: #ff6a00;
+      color: #00ffff;
       transform: scale(1.2);
     }
 
     footer {
       position: absolute;
-      bottom: 20px;
+      bottom: 10px;
       width: 100%;
       text-align: center;
       font-size: 0.9rem;
-      color: #555;
+      color: #444;
+      z-index: 2;
     }
   </style>
 </head>
@@ -154,24 +133,23 @@
 
   <div class="container">
     <div class="tech-name">
-      <span class="V">V</span>
-      <span class="A">A</span>
-      <span class="T">T</span>
-      <span class="S">S</span>
-      <span class="A">A</span>
-      <span class="L">L</span>
-      &nbsp;&nbsp;
-      <span class="P">P</span>
-      <span class="A">A</span>
-      <span class="T">T</span>
-      <span class="E">E</span>
-      <span class="L">L</span>
+      <div class="tech-letter"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"></div>
+      <div class="tech-letter"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" alt="GCP"></div>
+      <div class="tech-letter"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js"></div>
+      <div class="tech-letter"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/socketio/socketio-original.svg" alt="Socket"></div>
+      <div class="tech-letter"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" alt="GCP"></div>
+      <div class="tech-letter"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux"></div>
+      <div class="tech-letter"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker"></div>
+      <div class="tech-letter"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" alt="Kubernetes"></div>
+      <div class="tech-letter"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" alt="AWS"></div>
+      <div class="tech-letter"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub"></div>
+      <div class="tech-letter"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-plain.svg" alt="VS Code"></div>
     </div>
 
-    <h1>Coming Soon</h1>
-    <p>My professional portfolio is launching soon. Stay tuned!</p>
+    <h2>VATSAL PATEL | Portfolio Coming Soon</h2>
+
     <form class="email-form">
-      <input type="email" placeholder="Enter your email" required />
+      <input type="email" placeholder="Your email..." required>
       <button type="submit">Notify Me</button>
     </form>
 
@@ -187,28 +165,31 @@
 
   <script>
     tsParticles.load("tsparticles", {
-      fullScreen: { enable: false },
+      background: {
+        color: "#0a0a0a"
+      },
       particles: {
-        number: { value: 100 },
-        color: {
-          value: ["#00ffff", "#ff4500"] // Ice & Fire
-        },
+        number: { value: 120 },
+        color: { value: ["#00ffff", "#ff4500"] },
         shape: { type: "circle" },
-        opacity: {
-          value: 0.6,
-          random: true
-        },
-        size: {
-          value: { min: 1, max: 5 }
-        },
+        size: { value: { min: 1, max: 5 } },
+        opacity: { value: 0.6 },
         move: {
           enable: true,
-          speed: 1,
+          speed: 0.5,
           direction: "none",
           outModes: { default: "out" }
         }
       },
-      background: { color: "#0c0f13" }
+      interactivity: {
+        events: {
+          onHover: { enable: true, mode: "repulse" }
+        },
+        modes: {
+          repulse: { distance: 100 }
+        }
+      },
+      fullScreen: { enable: false }
     });
   </script>
 </body>
